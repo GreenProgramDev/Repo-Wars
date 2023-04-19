@@ -1,11 +1,15 @@
 import React, { useState } from "react"
 import "./app.css"
+import useRepos from "./hooks/useRepos"
+
 
 
 const App = () => {
   const [showGame, setShowGame] = useState<boolean>(false)
-  const [repos, setRepos] = useState( ["repol"] )
-  const handleStartClick = () => { setShowGame(true) }
+  const [repos, setRepos, allRepos] = useRepos( 100 )
+
+  const handleStartClick = () => { 
+    setShowGame(true) }
 
   return (
     <main>
