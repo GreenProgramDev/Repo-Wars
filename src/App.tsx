@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import "./app.css"
 import useRepos from "./hooks/useRepos"
+import { Game } from "./components"
 
 
 
@@ -17,9 +18,7 @@ const App = () => {
         <>
           <h1 className='title'>Welcome to RepoWars</h1>
           <h2 className='headline gradient text'>A Developer-driven guessing game</h2>
-          {/* {repos.map((repo) => (
-            <h1>{repo.name}</h1>
-          ))}  */}
+
           {repos.length === 0 ? (
             <p className='loading'>Loading game...</p>
           ) : (
@@ -28,9 +27,12 @@ const App = () => {
         </>
       )}
       {showGame && (
-        <>
-        <h1>Game</h1>
-        </>
+        <Game
+          repoState={[repos,setRepos]}
+          originalList={allRepos}
+          setShowGame={setShowGame}
+        />
+  
       )}
   </main>
   )
