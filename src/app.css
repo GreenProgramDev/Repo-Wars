@@ -50,7 +50,7 @@
 }
 
 body{
-font-size: 6rem;
+font-size: 2rem;
 background-color: var(--color-dark);
 color: var(--color-light);
 }
@@ -67,7 +67,7 @@ main{
 }
 
 .title{
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 700;
   text-align: center;
   color: var(--color-light);
@@ -75,7 +75,7 @@ main{
 }
 
 .headline{
-  font-size: 3rem;
+  font-size: 1.5rem;
   line-height: 4rem;
   display: flex;
   text-align: center;
