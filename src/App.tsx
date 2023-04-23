@@ -10,7 +10,8 @@ const App = () => {
   const [repos, setRepos, allRepos] = useRepos( 100 )
 
   const handleStartClick = () => { 
-    setShowGame(true) }
+    setShowGame(true) 
+  }
 
   return (
     <main>
@@ -18,11 +19,10 @@ const App = () => {
         <>
           <h1 className='title'>Welcome to RepoWars</h1>
           <h2 className='headline gradient text'>A Developer-driven guessing game</h2>
-
           {repos.length === 0 ? (
             <p className='loading'>Loading game...</p>
           ) : (
-            <button className="button gradient" type="submit" onClick={handleStartClick} >Start</button>
+            <button className='button gradient' type="submit" onClick={handleStartClick} >Start</button>
           )}
         </>
       )}
