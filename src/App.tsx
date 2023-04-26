@@ -32,7 +32,6 @@ const App = () => {
           originalList={allRepos}
           setShowGame={setShowGame}
         />
-  
       )}
   </main>
   )
