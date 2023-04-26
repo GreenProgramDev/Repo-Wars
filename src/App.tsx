@@ -7,7 +7,7 @@ import { Game } from "./components"
 
 const App = () => {
   const [showGame, setShowGame] = useState<boolean>(false)
-  const [repos, setRepos, allRepos] = useRepos( 100 )
+  const [repos, setRepos, allRepos] = useRepos( 4 )
 
   const handleStartClick = () => { 
     setShowGame(true) 
