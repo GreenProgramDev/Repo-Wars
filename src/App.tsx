@@ -7,7 +7,7 @@ import { Game } from "./components"
 
 const App = () => {
   const [showGame, setShowGame] = useState<boolean>(false)
-  const [repos, setRepos, allRepos] = useRepos( 20 )
+  const [repos, setRepos, allRepos] = useRepos( 2 )
 
   const handleStartClick = () => { 
     setShowGame(true) 
@@ -22,7 +22,7 @@ const App = () => {
           {repos.length === 0 ? (
             <p className='loading'>Loading game...</p>
           ) : (
-            <button className='button gradient' type="submit" onClick={handleStartClick} >Start</button>
+            <button className='learn-more' type="submit" onClick={handleStartClick} >Start</button>
           )}
         </>
       )}
