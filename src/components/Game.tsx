@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import './game.css' 
 import RepoCard from "./RepoCard"
-import { FaExchangeAlt, FaTimesCircle } from 'react-icons/fa'
+import { FaCheckCircle, FaExchangeAlt, FaTimesCircle } from 'react-icons/fa'
 
 interface GameProps {
     repoState: [Repo[], React.Dispatch<React.SetStateAction<Repo[]>>]
@@ -21,7 +21,7 @@ const Game: React.FC<GameProps> = ( {
     const [repo1, setRepo1] = useState<Repo | null>(null)
     const [correct, setCorrect] = useState<number>(0)
     const [wrong, setWrong] = useState<number>(0)
-    // Random Repo Selection Logic
+    const resultScore = correct > wrong ? "you won 😎 "  : correct === wrong ? "Tie In The Game"  : "You Wrong 😕"
     const randomSelect = (arr: Repo[]) => {
         // If there are less than 2 repositories, reset the list
         if (arr.length < 2){
@@ -77,19 +77,42 @@ const Game: React.FC<GameProps> = ( {
 
     return (
          <div className="game">
-            {over ? (<div className="score"></div>
+            {over ? (<div className="score">
+            <div className="cardDash">
+                    <div className="circle"></div>
+                    <div className="circle"></div>
+                    <div className="card-inner">
+                        <div className="styleDash">
+                            <div>
+                                {resultScore}
+                            </div>
+
+                            <h1 className="styleCorrect">
+                                {correct}
+                                <FaCheckCircle/>
+                            </h1>
+                            <h1>
+                                {wrong}
+                                <FaTimesCircle/>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
             ) : (
                 repo1 && repo2 && <div className="repos">
                     <h1 className="title">Choose the Repo with most Stars!</h1>
                     <div className="container">
+                        
                         {/* TODO: Create component for the Repo */}
                        <RepoCard content={repo1} handler={handleChoice} />
+                       
 
                         <div className="dashboard">
                             <div className="result correct">
                                 <label>Correct</label>
                                 <p>{correct}</p>
-                                <FaTimesCircle/>
+                                <FaCheckCircle/>
                             </div>
 
                             <FaExchangeAlt className="icon-versus"/>
@@ -104,9 +127,13 @@ const Game: React.FC<GameProps> = ( {
                         <RepoCard content={repo2} handler={handleChoice}/>
                     </div>
                 </div>
+                
             )}
-            
-            <div className="buttons">
+            <div>
+                
+            </div>
+            <div className="buttons playAgain">
+                
                 <button type="submit" className="button gradient alternate" onClick={() =>setShowGame(false)}>
                     {over ? 'Play Again' : 'Back'}
                 </button>
@@ -118,6 +145,7 @@ const Game: React.FC<GameProps> = ( {
                         Skip
                     </button>
                 )}
+                
             </div>
          </div>
     )
