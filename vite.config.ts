@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/Repo-Wars',
   plugins: [ react() ],
   resolve: { alias: { 'node-fetch' : 'axios' } },
-  define: {
-  /*global: {}, */
-},
+    /*define: {
+global: {}, 
+},*/
 })
