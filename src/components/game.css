@@ -1,228 +1,236 @@
-.game{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-
+.game {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5%;
 }
 
-.game .repos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    height: 100%;
-    max-height: 80%;
-    width: 100%;
-    padding: 1rem;
-
+.game .repos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+  max-height: 80%;
+  width: 100%;
+  padding: 2%;
 }
 
-.repos .title{
-    font-size: 1.5rem;
-    overflow-wrap: break-word;
-    text-shadow: 1.5px 1px var(--color-primary);
-
+.repos .title {
+  font-size: 1.5rem;
+  overflow-wrap: break-word;
+  text-shadow: 1.5px 1px var(--color-primary);
 }
 
-.repos .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 2rem 0;
-    gap: 1rem;
+.repos .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+  gap: 0.5rem;
+}
+
+.container .dashboard,
+.result {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .buttons {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .icon-versus {
-    color: var(--color-shade);
-    font-size: 2.5rem;
-
+  color: var(--color-shade);
+  font-size: 2rem;
+  margin: 0 1rem;
 }
 
+.icon-correct {
+  color: var(--color-sucess);
+}
+.icon-wrong {
+  color: var(--color-danger);
+}
 
+.wrong,
+.correct {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
 /* card dashboard*/
 .playAgain {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-
+  display: flex;
+  gap: 3rem;
+  padding: 1rem;
 }
 
 .cardDash {
-    width: 23rem;
-    height: 13rem;
-    transition: all 0.2s;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .card-inner {
-    display: flex;
-    width: inherit;
-    height: inherit;
-    background: rgba(255,255,255,.05);
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
-    backdrop-filter: blur(10px);
-    border-radius: 8px;
-  }
-  
-  .cardDash:hover {
-    transform: scale(1.04) rotate(1deg);
-  }
-  
-  .circle {
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(#b0e633, #53ef7d);
-    border-radius: 50%;
-    position: absolute;
-    animation: move-up6 1.5s ease-in infinite alternate-reverse;
-  }
-  
-  .circle:nth-child(1) {
-    top: -0.5rem;
-    left: -25px;
-  }
-  
-  .circle:nth-child(2) {
-    bottom: -0.5rem;
-    right: -25px;
-    animation-name: move-down1;
-  }
-  
-  @keyframes move-up6 {
-    to {
-      transform: translateY(-1rem);
-    }
-  }
-  
-  @keyframes move-down1 {
-    to {
-      transform: translateY(0.6rem);
-    }
-  }
-
-
-.styleDash  {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 0.5rem;
+  width: 23rem;
+  height: 13rem;
+  transition: all 0.2s;
+  position: relative;
+  /* cursor: pointer; */
 }
-  
+
+.card-inner {
+  display: flex;
+  width: inherit;
+  height: inherit;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.cardDash:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(#b0e633, #53ef7d);
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 1.5s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: -0.5rem;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -0.5rem;
+  right: -25px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-1rem);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(0.6rem);
+  }
+}
+
+.styleDash {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .statusGame {
-    color: bisque;
-    font-size: 2rem;
-    font-weight: 700;
-    text-shadow: 2.5px 2.5px var(--color-darkest);
+  /* color: bisque; */
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 2.5px 2.5px var(--color-darkest);
 }
 
 .resultScore {
-    display: flex;
-    gap: 2rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-shadow: 1px 1px var(--color-darkest);
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 1px 1px var(--color-darkest);
+  gap: 0.5rem;
 }
 
-.styleWrong, .styleCorrect{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-
+.styleWrong,
+.styleCorrect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
-
-.styleCorrect{
-    color: #b0e633;
-}
-.styleWrong{
-    color: red;
-}
-
-
 
 button {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    outline: none;
-    border: 0;
-    vertical-align: middle;
-    text-decoration: none;
-    font-family: inherit;
-    font-size: 15px;
-   }
-   
-   button.learn-more {
-    font-weight: 600;
-    color: var(--color-light);
-    text-transform: uppercase;
-    padding: 1.25em 2em;
-    background: #1c1e2e;
-    border: 2px solid #059669;
-    border-radius: 0.75em;
-    transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
-    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
-   }
-   
-   button.learn-more::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #406446;
-    border-radius: inherit;
-    transform: translate3d(0, 0.75em, -1em);
-    transform: translate3d(0, 0.75em, -1em);
-    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
-   }
-   
-   button.learn-more:hover {
-    background: #1c1e2e;
-    transform: translate(0, 0.25em);
-    transform: translate(0, 0.25em);
-   }
-   
-   button.learn-more:hover::before {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 15px;
+}
 
-    transform: translate3d(0, 0.5em, -1em);
-    transform: translate3d(0, 0.5em, -1em);
-   }
-   
-   button.learn-more:active {
-    background: #242d2f;
-    transform: translate(0em, 0.75em);
-    transform: translate(0em, 0.75em);
-   }
-   
-   button.learn-more:active::before {
+button.learn-more {
+  font-weight: 600;
+  color: var(--color-light);
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  background: #1c1e2e;
+  border: 2px solid #059669;
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: background 150ms cubic-bezier(0, 0, 0.58, 1),
+    -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    background 150ms cubic-bezier(0, 0, 0.58, 1),
+    -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
 
-    transform: translate3d(0, 0, -1em);
-    transform: translate3d(0, 0, -1em);
-   }
+button.learn-more::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #406446;
+  border-radius: inherit;
+  transform: translate3d(0, 0.75em, -1em);
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    box-shadow 150ms cubic-bezier(0, 0, 0.58, 1),
+    -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more:hover {
+  background: #1c1e2e;
+  transform: translate(0, 0.25em);
+  transform: translate(0, 0.25em);
+}
+
+button.learn-more:hover::before {
+  transform: translate3d(0, 0.5em, -1em);
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button.learn-more:active {
+  background: #242d2f;
+  transform: translate(0em, 0.75em);
+  transform: translate(0em, 0.75em);
+}
+
+button.learn-more:active::before {
+  transform: translate3d(0, 0, -1em);
+  transform: translate3d(0, 0, -1em);
+}

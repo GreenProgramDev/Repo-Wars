@@ -22,6 +22,8 @@ const Game: React.FC<GameProps> = ( {
     const [correct, setCorrect] = useState<number>(0)
     const [wrong, setWrong] = useState<number>(0)
     const resultScore = correct > wrong ? "You Won 😎 "  : correct === wrong ? "Wow Almost in"  : "You Lost 😕"
+    const resultClass = correct > wrong ? "statusGame icon-correct"  : correct === wrong ? "statusGame" : "statusGame icon-wrong"
+   
     const randomSelect = (arr: Repo[]) => {
         // If there are less than 2 repositories, reset the list
         if (arr.length < 2){
@@ -83,21 +85,21 @@ const Game: React.FC<GameProps> = ( {
                                 <div className="circle"></div>
                                 <div className="card-inner">
                                     <div className="styleDash">
-                                        <h1 className="statusGame"> {resultScore} </h1>
+                                        <h1 className={resultClass}> {resultScore} </h1>
                                         <div className="resultScore">
-                                            <div className="styleCorrect">
-                                                <label htmlFor="">Correct</label>
+                                            <div>
+                                                <label className="icon-correct" >Correct</label>
                                                 <h1 className="correct">
                                                     {correct}
-                                                    <FaCheckCircle/>
+                                                    <FaCheckCircle className="icon-correct"/>
                                                 </h1>
                                             </div>
                                             <FaExchangeAlt className="icon-versus"/>
-                                            <div className="styleWrong">
-                                                <label htmlFor="">Wrong</label>
-                                                <h1 className="Wrong">
-                                                    {wrong}
-                                                    <FaTimesCircle/>
+                                            <div>
+                                                <label className="icon-wrong" >Wrong</label>
+                                                <h1 className="wrong">
+                                                   {wrong}
+                                                    <FaTimesCircle className="icon-wrong"/>
                                                 </h1>
                                             </div>
                                         </div>
@@ -116,17 +118,17 @@ const Game: React.FC<GameProps> = ( {
 
                         <div className="dashboard">
                             <div className="result correct">
-                                <label>Correct</label>
+                                <label className="icon-correct">Correct</label>
                                 <p>{correct}</p>
-                                <FaCheckCircle/>
+                                <FaCheckCircle className="icon-correct"/>
                             </div>
 
                             <FaExchangeAlt className="icon-versus"/>
 
                             <div className="result wrong">
-                                <label>Wrong</label>
+                                <label className="icon-wrong">Wrong</label>
                                 <p>{wrong}</p>
-                                <FaTimesCircle/>
+                                <FaTimesCircle className="icon-wrong" />
                             </div>
                         </div>
 
@@ -135,14 +137,9 @@ const Game: React.FC<GameProps> = ( {
                 </div>
                 
             )}
-            <div>
-                
-            </div>
+     
             <div className="buttons playAgain">
                 
-                <button type="submit" className="learn-more" onClick={() =>setShowGame(false)}>
-                    {over ? 'Play Again' : 'Back'}
-                </button>
                 {!over && (
                     <button type="submit" 
                     className="learn-more" 
@@ -152,6 +149,9 @@ const Game: React.FC<GameProps> = ( {
                     </button>
                 )}
                 
+                <button type="submit" className="learn-more" onClick={() =>setShowGame(false)}>
+                    {over ? 'Play Again' : 'Back'}
+                </button>
             </div>
          </div>
     )

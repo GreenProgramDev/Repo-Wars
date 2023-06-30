@@ -30,42 +30,43 @@ const RepoCard: React.FC<RepoCardProps> = ({content, handler}) => {
                 />
                 <ul className="stats">
                     <li className="item">
-                        <p>{content.stargazers_count}</p>
-                        {/* <p>???? ...</p> */}
+                        {/* count from stars of the repo */}
+                        {/* <p>{content.stargazers_count}</p> */}
+                        {<p>????...</p>}
                     </li>
                     <li className="item">
+                        <p>Forks -</p>
                         <p>{content.forks_count}</p>
                     </li>
                     <div className="booleans">
-                    <li className='item'>
-                        <p>{content.stargazers_count}</p>
-                <TbPageBreak className={`item-${content.has_pages}`} />
-              </li>
-              <li className='item'>
-                <VscIssues className={`item-${content.has_issues}`} />
-              </li>
-              <li className='item'>
-                <VscCommentDiscussion className={`item-${content.has_discussions}`} />
-              </li>
-              <li className='item'>
-                <BsBook className={`item-${content.has_wiki}`} />
-              </li>
-              <li className='item'>
-                <FaDownload className={`item-${content.has_downloads}`} />
-              </li>
-              <li className='item'>
-                <VscProject className={`item-${content.has_projects}`} />
-              </li> 
+                        <li className='item'>
+                            <p>{content.stargazers_count}</p>
+                            <TbPageBreak className={`item-${content.has_pages}`} />
+                        </li>
+                        <li className='item'>
+                            <VscIssues className={`item-${content.has_issues}`} />
+                        </li>
+                        <li className='item'>
+                            <VscCommentDiscussion className={`item-${content.has_discussions}`} />
+                        </li>
+                        <li className='item'>
+                            <BsBook className={`item-${content.has_wiki}`} />
+                        </li>
+                        <li className='item'>
+                            <FaDownload className={`item-${content.has_downloads}`} />
+                        </li>
+                        <li className='item'>
+                            <VscProject className={`item-${content.has_projects}`} />
+                        </li> 
                     </div>
                     <div className="topics">
                         {content.topics.map(topic => 
                         <li className="topic" key={topic}> 
-                        <p> {topic} </p>
+                            <p> {topic} </p>
                         </li>)}
                     </div>
                 </ul>
             </div>
-
         </div>
     </div>
 }
