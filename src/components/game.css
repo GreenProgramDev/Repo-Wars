@@ -143,6 +143,7 @@
 
 .statusGame {
   /* color: bisque; */
+  text-align: center;
   font-size: 2rem;
   font-weight: 700;
   text-shadow: 2.5px 2.5px var(--color-darkest);

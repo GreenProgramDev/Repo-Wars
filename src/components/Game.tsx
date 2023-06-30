@@ -21,7 +21,7 @@ const Game: React.FC<GameProps> = ( {
     const [repo1, setRepo1] = useState<Repo | null>(null)
     const [correct, setCorrect] = useState<number>(0)
     const [wrong, setWrong] = useState<number>(0)
-    const resultScore = correct > wrong ? "You Won 😎 "  : correct === wrong ? "Wow Almost in"  : "You Lost 😕"
+    const resultScore = correct > wrong ? "You Won 😎 "  : correct === wrong ? "Try again"  : "You Lost 😕"
     const resultClass = correct > wrong ? "statusGame icon-correct"  : correct === wrong ? "statusGame" : "statusGame icon-wrong"
    
     const randomSelect = (arr: Repo[]) => {
