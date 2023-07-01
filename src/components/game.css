@@ -255,12 +255,9 @@ button.learn-more:active::before {
     padding: 0px;
   }
 
-  .styleDash{
-    padding: ;
-  }
   .styleDash .resultScore{
     gap: 0;
-    max-width: 15rem;
+    max-width: 1rem;
   }
 
 }
