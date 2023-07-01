@@ -21,7 +21,7 @@
   gap: 0.5rem;
   text-transform: capitalize;
 }
-z
+
 .header .name {
   font-weight: 700;
   color: var(--color-secondary);
@@ -119,45 +119,31 @@ z
   main .title {
     padding: 1rem;
   }
-  main .headline{
+  main .headline {
     max-width: 20rem;
     margin: 0;
   }
-  .stats .topics{
+  .stats .topics {
     max-width: 80%;
   }
 
   .repos .title {
     /* margin-top: 1rem; */
   }
-  
+
   .repo {
     width: 85%;
     padding: 0.8rem;
     font-size: 1rem;
   }
-  .repo .header{
+  .repo .header {
     gap: 0.6rem;
   }
-  .header .name{
+  .header .name {
     margin-top: 0.4rem;
   }
 
   .data .stats {
     gap: 0.3rem;
-  }
-}
-
-/* Estilos para tablets e desktops */
-@media (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
-}
-
-/* Estilos para monitores maiores */
-@media (min-width: 1280px) {
-  body {
-    font-size: 20px;
   }
 }

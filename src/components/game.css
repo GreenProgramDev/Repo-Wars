@@ -251,9 +251,16 @@ button.learn-more:active::before {
     position: relative;
     /* cursor: pointer; */
   }
-
   .repos .container {
     padding: 0px;
+  }
+
+  .styleDash{
+    padding: ;
+  }
+  .styleDash .resultScore{
+    gap: 0;
+    max-width: 15rem;
   }
 
 }
