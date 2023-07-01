@@ -1,116 +1,163 @@
 .repo {
-    background-color: var(--color-darkest);
-    width: 25rem;
-    padding: 2%;
-    border-radius: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    gap: 1rem;
+  background-color: var(--color-darkest);
+  width: 30%;
+  padding: 2%;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  gap: 1rem;
 }
 
 .repo:hover {
-    background-color: var(--color-darkish);
-    cursor: pointer;
+  background-color: var(--color-darkish);
+  cursor: pointer;
 }
 
 .repo .header {
-    display: flex;
-    flex-direction: column;
-    height: 2rem;
-    gap: 0.5rem;
-    text-transform: capitalize;
-
+  display: flex;
+  flex-direction: column;
+  height: 2rem;
+  gap: 0.5rem;
+  text-transform: capitalize;
 }
-
+z
 .header .name {
-    font-weight: 700;
-    color: var(--color-secondary);
-
+  font-weight: 700;
+  color: var(--color-secondary);
 }
 
 .header .fullname {
-    font-size: 0.8rem;
-    margin-left: auto;
-    color: var(--color-shade);
+  font-size: 0.8rem;
+  margin-left: auto;
+  color: var(--color-shade);
 }
 
 .repo .content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .content .description {
-    height: 2rem;
-    line-height: 1.2rem;
-
+  height: 2rem;
+  line-height: 1rem;
 }
 
 .content .data {
-    display: flex;
-    justify-content: space-between;
-    gap: 0.5rem;
-
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
-.data .avatar{
-    width: 4rem;
-    height: 4rem;
-    margin-top: 0.5rem;
-    object-fit: cover;
-    border-radius: 1rem;
-    background-color: var(--color-darkest);
-    border: 2px solid var(--color-primary);
+.data .avatar {
+  width: 4rem;
+  height: 4rem;
+  margin-top: 0.5rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  background-color: var(--color-darkest);
+  border: 2px solid var(--color-primary);
 }
 
-.data .stats{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.6rem;
+.data .stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
 }
 
-.stats .item{
-    display: flex;
-    gap: 0.5rem;
-    color: var(--color-primary) !important;
-
+.stats .item {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--color-primary) !important;
 }
 
-.stats .booleans{
-    display: flex;
-    gap: 0.5rem;
-
+.stats .booleans {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .stats .item p {
-    color: var(--color-light);
-
+  color: var(--color-light);
 }
 
-.stats .item-false{
-    color: var(--color-shade);
+.stats .item-false {
+  color: var(--color-shade);
 }
-
 
 .stats .topics {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: flex-end;
-    max-height: 1.25rem;
-    max-width: 50%;
-    height: 3rem;
-    overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  max-height: 1.25rem;
+  max-width: 50%;
+  height: 3rem;
+  overflow: hidden;
 }
 
 .stats .topic {
-    background-color: var(--color-primary);
-    height: 1.25rem;
-    padding: 0.3rem 0.4rem;
-    border-radius: 0.5rem;
-    font-size: 0.6rem;
-    color: var(--color-darkest);
+  background-color: var(--color-primary);
+  height: 1.25rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 0.5rem;
+  font-size: 0.6rem;
+  color: var(--color-darkest);
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  main {
+    gap: 2rem;
+  }
+  main .title {
+    padding: 1rem;
+  }
+  main .headline{
+    max-width: 20rem;
+    margin: 0;
+  }
+  .stats .topics{
+    max-width: 80%;
+  }
+
+  .repos .title {
+    /* margin-top: 1rem; */
+  }
+  
+  .repo {
+    width: 85%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  .repo .header{
+    gap: 0.6rem;
+  }
+  .header .name{
+    margin-top: 0.4rem;
+  }
+
+  .data .stats {
+    gap: 0.3rem;
+  }
+}
+
+/* Estilos para tablets e desktops */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Estilos para monitores maiores */
+@media (min-width: 1280px) {
+  body {
+    font-size: 20px;
+  }
 }

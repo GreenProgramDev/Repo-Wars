@@ -235,3 +235,25 @@ button.learn-more:active::before {
   transform: translate3d(0, 0, -1em);
   transform: translate3d(0, 0, -1em);
 }
+
+@media (max-width: 767px) {
+  
+  .game{
+    padding: 1rem 0;
+  }
+  .game .buttons { 
+    margin-top: 1rem;
+  }
+  .cardDash {
+    width: 15rem;
+    padding: 0 2%;
+    transition: all 0.2s;
+    position: relative;
+    /* cursor: pointer; */
+  }
+
+  .repos .container {
+    padding: 0px;
+  }
+
+}
