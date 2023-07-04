@@ -24,7 +24,7 @@ This project is a game that displays all the data of two randomly selected repos
 ## Live Version
 
 Here you can start the game and understand its essence,
-[Let's Play?](repo-wars-gamma.vercel.app).
+[Let's Play?](https://my-repo-wars.vercel.app/).
 
 ## Installation
 
