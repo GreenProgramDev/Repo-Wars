@@ -1,15 +1,12 @@
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700&display=swap');
-
-/* theme */
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family:wght@200;400;700&display=swap');
 :root {
   --color-primary: #74d3ae;
   --color-secondary: #a6c48a;
   --color-highlight: #fff;
   --color-danger: #b80c09;
   --color-light: #f6e7cb;
-  --color-sucess: #98CE00 ;
-
+  --color-sucess: #98ce00;
 
   /* Dark shades */
   --color-shade: #556;
@@ -17,7 +14,6 @@
   --color-dark: #112;
   --color-darkest: #001;
 }
-
 
 .gradient {
   background: --webkit-linear-gradient(
@@ -27,36 +23,34 @@
   );
 }
 
-.gradient .text{
+.gradient .text {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gradient .alternate{
+.gradient .alternate {
   background: --webkit-linear-gradient(
     bottom,
     var(--color-danger),
     var(--color-secondary)
   );
-
 }
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
-body{
-font-size: 2rem;
-background-color: var(--color-dark);
-color: var(--color-light);
+body {
+  font-size: 2rem;
+  background-color: var(--color-dark);
+  color: var(--color-light);
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,18 +58,18 @@ main{
   gap: 2rem;
   height: 100svh;
   width: 100%;
-
 }
 
-.title{
+.title {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 100;
   text-align: center;
-  color: var(--color-light);
-  text-shadow: 3px 3px var(--color-primary);
+  color: var(--color-shade) !important;
+  text-shadow: -7px 7px 10px var(--color-darkest) !important;
+  font-family: 'Bungee Shade';
 }
 
-.headline{
+.headline {
   font-size: 1.5rem;
   line-height: 3rem;
   display: flex;
@@ -86,7 +80,7 @@ main{
   color: var(--color-primary);
 }
 
-.loading{
+.loading {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
@@ -94,18 +88,14 @@ main{
   animation: bouncy 1s infinite;
 }
 
-
-@keyframes bouncy{
-  0%{
+@keyframes bouncy {
+  0% {
     transform: translateX(0);
   }
-  50%{
-    transform: translateX(-0.5rem) ;
+  50% {
+    transform: translateX(-0.5rem);
   }
-  100%{
+  100% {
     transform: translateX(0);
   }
 }
-
-
-

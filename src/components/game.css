@@ -235,11 +235,10 @@ button.learn-more:active::before {
 }
 
 @media (max-width: 767px) {
-  
-  .game{
+  .game {
     padding: 1rem 0;
   }
-  .game .buttons { 
+  .game .buttons {
     margin-top: 1rem;
   }
   .cardDash {
@@ -253,8 +252,7 @@ button.learn-more:active::before {
     padding: 0px;
   }
 
-  .styleDash .resultScore{
+  .styleDash .resultScore {
     gap: 0;
   }
-
 }
