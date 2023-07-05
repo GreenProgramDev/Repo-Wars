@@ -5,7 +5,7 @@
   <img src="src/assets/logoReadme.png" alt="name of the Header that represents the img">
 </p>
 
-This project is a game that displays all the data of two randomly selected repositories and the user must choose the that has more stars. Was using React, Vite, TypeScript and consuming the public API of GitHub.
+This project is a game that displays all the data of two randomly selected repositories and the user must choose the that has more stars. It was using React, Vite, TypeScript and relies on the GitHub public API for data retrieval.
 
 ---
 
